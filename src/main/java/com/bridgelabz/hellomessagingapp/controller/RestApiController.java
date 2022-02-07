@@ -18,8 +18,8 @@ public class RestApiController {
         return "Hello"+ name + "from BridgeLabs.";
     }
     // UC-3
-    //Using-http://localhost:8080/hello/param/ Azhar
-    @RequestMapping("/param/{name}")
+    //Using-http://localhost:8080/hello/param/Azhar
+    @GetMapping("/param/{name}")
     public String sayHelloParam(@PathVariable String name){
         return "Hello"+ name + " from BridgeLabs.";
     }
