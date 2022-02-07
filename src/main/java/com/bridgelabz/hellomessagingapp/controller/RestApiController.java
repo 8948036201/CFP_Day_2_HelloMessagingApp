@@ -28,5 +28,9 @@ public class RestApiController {
     public String sayHello(@RequestBody User user){
         return "Hello"+user.getFirstName()+" "+user.getLastName()+ " from BridgeLabs.";
     }
-
+    //http://localhost:8080/hello/put/Lisa/?lastName=Terrisa
+    @PutMapping("/put/{firstName}")
+    public String sayHello(@PathVariable String firstName, @RequestParam(value = "lastName") String lastName) {
+        return "Hello " + firstName + " " + lastName + "!";
+    }
 }
